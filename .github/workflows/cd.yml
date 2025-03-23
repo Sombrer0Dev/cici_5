@@ -32,7 +32,7 @@ jobs:
           username: '${{ secrets.SERVER_USER }}'
           key: '${{ secrets.SSH_PRIVATE_KEY }}'
           script: |
-            cd /cicd_5
+            cd '${{ secrets.CODE_PATH }}'
             docker-compose pull
             docker-compose down
             docker-compose up -d
